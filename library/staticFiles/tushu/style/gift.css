@@ -1,0 +1,72 @@
+* {margin:0; padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,"Microsoft Yahei",simsun,sans-serif;}
+body{background-color:#fff; color:#000;}
+h1,h2,h3,h4,h5,h6,button,input,select,textarea{font-size:100%;}
+ul,ol{list-style:none;}
+a{color:#333; text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{border:0;}
+table{border-collapse:collapse; border-spacing:0;}
+caption,th{text-align:center;}
+.left{float:left;}
+.right{float:right;}
+.clearfix:after{content:"."; display:block; clear:both; height:0; font-size:0; visibility:hidden;}
+.clearfix{zoom:1;}
+
+.wrap {width:996px; margin:0 auto;}
+.header {height:160px; margin-bottom:10px;}
+.main {margin-bottom:40px;}
+.leftside {width:783px;}
+.box {float:left; height:213px; border:1px solid #b2b2b1;}
+.boxHd a {float:right; color:#fff;}
+.boxBd {height:177px;}
+.tabview {position:relative; width:168px; height:126px; float:left; padding:8px 13px 36px 13px;}
+.trigger {position:absolute; left:13px; top:141px; width:168px; height:24px; padding-top:12px; text-align:center;}
+.img {border:2px solid #cbc8c8; width:164px; height:122px; overflow:hidden;}
+.img img {width:164px; height:122px;}
+.list {float:right; width:220px; padding-top:10px;}
+
+.box1 {width:414px; padding:0 2px;}
+.box2 {width:335px; padding:0 2px; margin-left:13px; display:inline;}
+.box2 .boxBd {padding-top:10px; padding-left:20px; height:167px;}
+.box2 .boxBd li {position:relative; height:25px; line-height:25px; padding-left:30px;}
+.box2 b {position:absolute; left:0; top:0; display:block; height:25px; width:30px; text-align:center; line-height:25px; font-weight:normal;}
+
+.box3 {height:252px;}
+.box3 .boxBd {height:215px; padding-top:0;}
+.box3 ul.boxBd {padding-right:20px;}
+.way {text-align:center; height:32px; line-height:32px;}
+.way label {margin-right:10px;}
+.flashWrap {height:183px; overflow:hidden;}
+.flash {float:left; width:195px; text-align:center;}
+.num {float:right; padding-top:25px;}
+.num dt {font-weight:bold;}
+.num dd {padding-left:18px; line-height:24px; height:auto!important; height:24px; min-height:24px;}
+.num img {vertical-align:middle;}
+
+.rightside {width:201px;padding-top: 20px;}
+.togift,.notice {display:block; width:200px; margin-bottom:8px; height:41px; outline:0;}
+.togift {background:url(../images/togift.jpg) no-repeat left top;}
+.notice {background:url(../images/notice.jpg) no-repeat left top;}
+.fonts{font-size:16px;}
+.columnHd {height:41px; padding-left:65px; line-height:41px; font-weight:bold;}
+.search .columnBd {padding-top:12px;}
+.field {width:106px; height:15px; border:2px solid #cbccca;}
+
+.btn {background-position:0 0; margin-right:9px;}
+.reset {backgroudn-position:0 -24px;}
+
+.roll .columnBd {padding:0 5px; line-height:1.4;}
+.columnBd dd {text-align:right;}
+.footer {text-align:center; color:#666565;}
+
+.news {width:766px; border:1px solid #b7b7b6;}
+.newsHd a {text-decoration:underline;}
+.newsBd {padding-bottom:20px;}
+.newAnnounce{float:right; width:741px;}
+.newAnnounce a{color:#155868;}
+.newAnnounce b{width:3px; height:3px;}
+.newAnnounce dt b.lt{background-position:0px -10px; left:-1px; top:-1px;}
+.newAnnounce dd{float:left; padding:6px 5px 0 5px; position:relative;}
+.newAnnounce dd ul li a{margin-right:13px;}
+.newNoticeBd {overflow:hidden;}

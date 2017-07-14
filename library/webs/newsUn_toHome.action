@@ -1,0 +1,120 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<base href="http://tsg.tit.edu.cn:80/">
+		<title>捐赠系统</title>
+		<link rel="stylesheet" type="text/css"
+			href="staticFiles/tushu/style/gift.css" />
+		<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript">
+	//<![CDATA[
+	$(document).ready(function() {
+		var curr = 0;
+		timer = setInterval(function() {
+			var todo = (++curr) % 6;
+			$(".trigger a").eq(todo).click();
+		}, 3000);
+
+		$(".img img").hover(function() {
+			clearInterval(timer);
+		}, function() {
+			timer = setInterval(function() {
+				var todo = (++curr) % 6;
+				$(".trigger a").eq(todo).click();
+			}, 3000);
+		});
+
+		$(".trigger a").each(function(i) {
+			$(this).click(function() {
+				$(this).addClass("current").siblings().removeClass("current");
+				$(".img img").eq(i).show().siblings().hide();
+				curr = i;
+			});
+		});
+
+	});
+
+	//]]>
+</script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="header">
+				<img src="staticFiles/tushu/images/tushujuanzeng.jpg" />
+			</div>
+			<div style="background: url('/images/boxHd.jpg') repeat-x scroll 0 0 transparent; height: 36px;line-height: 36px;padding: 0 12px 0 15px;">
+				<a href="/"><b>图书馆首页</b></a>
+			</div>
+			<div class="main clearfix">
+				<div class="left leftside" style=" padding-left: 50px;width: 690px;">
+				  <h1 style="font-size: 1.9em; text-align: center;">捐赠须知</h1>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;太原工业学院图书馆欢迎本校师生、校友及社会各界人士向图书馆捐赠图书。太原工业学院图书馆将向所有捐赠者出具谢函，但由于馆藏范围和馆藏空间的限制，有必要对捐赠图书进行甄别取舍，敬请捐赠者知晓以下条例。
+</p>
+<p><strong>一、凡符合以下条件的图书将被纳入馆藏：</strong>
+  <br />1．内容符合本校教学科研范围的中外文学术专著。
+  <br />2．国际性、或全国性的会议论文或论文集及成套期刊。
+  <br />3．非正式出版的地方性文献，如地方志、族谱等有收藏价值的文献。
+  <br />4．私人收藏的古籍、善本或有收藏价值的手稿、实物。
+  <br />5．其他有收藏价值的学术研究档案及专题资料。
+  <br /><strong>二、下列图书不予入藏：</strong> 
+  <br />1.违反中华人民共和国著作权法之规定的图书,涉及政治纪律、侵权盗版的书籍报刊。 
+  <br />2.破损图书。
+  <br />3.內有划线、注记、眉批的图书。(若为海內外孤本或为名人批注，则不在此限) 
+  <br />4.內容陈旧的图书。
+  <br />5.不成套的图书。 
+  <br />6.基本上不具学术参考价值的图书。 
+  <br />7.其它不符合本馆馆藏发展政策的图书。 
+  <br /><strong>三、本馆权益</strong>
+  <br />1．所有捐赠文献，我馆一经接受，即拥有对该文献的所有权和处理权；
+  <br />2．本馆没有将捐赠文献寄还捐赠者的义务；
+  <br />3．本馆有权不知会捐赠者即对不予收藏的赠品进行处理，和今后对已入藏的赠品进行剔除；
+  <br />4. 对于受赠品，本馆将秉承"物尽其用"的原则，依据入藏标准决定收藏、保管和技术加工的方式。 
+  <br />5. 本馆对不予入藏或被从馆藏中剔除的捐赠品，将视其内容和品相的优劣作相应处理。
+  <br />6. 敬请邮寄捐赠者提供姓名（单位）、地址、邮编及联系方式，以便我馆对审定入藏的捐赠品及时寄发捐赠回执，以示感谢。
+  <br /><strong>四、受赠方式</strong>
+  <br />1．  到馆捐赠：
+  <br />地点：太原工业学院图书馆
+ <br /> 电话：3566726
+ <br /> 2．  邮寄捐赠：
+  <br />接收人：太原工业学院图书馆采编部
+  <br />地址：山西省太原市迎新街北一巷2号
+  <br />邮编：030008
+  <br />电话：0351-3566726
+  <br />传真：
+  <br />Email：hgfycg@126.com
+ <br />3．本地大批捐赠：可预约图书馆派人上门提取。电话：3566726
+  
+</p>
+				</div>
+
+				<div class="right rightside">
+				<script>
+    			function toAdd(){
+					if(confirm("你要登陆吗？")){
+						window.open("/webs/loginLib.jsp?cataId=45&toUrl=tushu");
+					}else{
+						window.open("/webs/newsUn_toNewsUnAdd.action?cataId=46&toUrl=tushu");
+					}
+    			}
+    		</script>
+    					<a href="/webs/tushuAdd.jsp" target="_blank" class="togift">
+					</a>
+					<a target="_blank" href="webs/newsUn_toHome.action?toUrl=tsXuzhi" class="notice"></a>
+
+					
+				</div>
+			</div>
+
+			<div class="footer">
+				版权所有 太原工业学院图书馆
+				<br />
+				Copyright &copy; 2012 Taiyuangongye University Library.
+			</div>
+		</div>
+	</body>
+</html>

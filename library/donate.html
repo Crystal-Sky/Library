@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书捐赠系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <link rel="stylesheet" type="text/css" href="staticFiles/tushu/style/gift.css">
+    <script src="staticFiles/xinan/js/jquery-1.4.4.min.js" language="javascript"></script>
+</head>
+<body>
+<div id="ContainerPanel" style="display:none;">
+    <div id="calendarPanel"
+         style="position: absolute;display: none;z-index: 9999;background-color: #FFFFFF;border: 1px solid #CCCCCC;width:175px;font-size:12px;"></div>
+</div>
+<script type="text/javascript">
+
+
+    function beforess() {
+
+        var jzname = document.getElementById("newsUn_title").value;
+        jzname = jzname.replace(/\s/g, '');
+        if (jzname == "") {
+            alert("请输入捐赠名项!");
+            return false;
+        }
+
+        var phoneNum = document.getElementById("newsUn_phoneNum").value;
+        phoneNum = phoneNum.replace(/\s/g, '');
+        if(phoneNum==""){
+            alert("请输入联系电话!");
+            return false;
+        }
+        if (phoneNum != "") {
+            var p1 = /^((0\d{2,3})-)?(\d{7,8})$/;
+            var p2 = /^1[3|5][0-9]\d{4,8}$/;
+            if (p1.test(phoneNum) || p2.test(phoneNum)) {
+                alert("我们已经保存您的信息，请等待联系！")
+                return true;
+            } else {
+                alert("请输入合法的手机或电话号码!\r\n如果是电话号码，请按格式输入\r\n正确格式：区号-座机号");
+                document.getElementById("newsUn_phoneNum").select();
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+
+
+<div class="wrap">
+    <div class="header">
+        <img src="staticFiles/tushu/images/tushujuanzeng.jpg">
+    </div>
+    <div class="main clearfix">
+        <div class="left leftside">
+            <div class="news">
+                <div class="newsBd" style="padding-left:50px;">
+                    <form name="addnews" method="post" action="#"
+                          onsubmit="return beforess();">
+                        <table class="t_news" width="716" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr height="30">
+                                <td colspan="3" style="text-align: center;font-size: 16px;font-weight: bolder;">图书捐赠
+                                </td>
+                            </tr>
+                            <input type="hidden" name="toUrl" value="tsnotice">
+                            <tr height="30">
+                                <td width="160">捐赠名项:</td>
+                                <td width="500"><input type="text" name="newsUn.title" size="50" value=""
+                                                       id="newsUn_title"></td>
+                                <td width="200" id="title_ret" style="color:#F00">&nbsp;</td>
+                            </tr>
+                            <tr height="30">
+                                <td>捐&nbsp;赠&nbsp;者:</td>
+                                <td width="500">
+                                    <input type="text" size="50" name="newsUn.userName">
+                                </td>
+                                <td width="200">&nbsp;</td>
+                            </tr>
+                            <tr height="30">
+                                <td>捐赠者联系电话:</td>
+                                <td><input maxlength="12" type="text" size="50" name="newsUn.phoneNum"
+                                           id="newsUn_phoneNum"></td>
+                                <td id="phone_ret" style="color:#F00">&nbsp;</td>
+                            </tr>
+                            <tr height="30">
+                                <td>捐赠者类型:</td>
+                                <td>
+                                    <select name="newsUn.userType">
+                                        <option value="社会人士">社会人士</option>
+                                        <option value="毕业生">毕业生</option>
+                                        <option value="在校生">在校生</option>
+                                        <option value="老师">老师</option>
+                                    </select>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr height="30">
+                                <td>捐赠日期:</td>
+                                <td><input type="text" name="newsUn.inserttime" size="10" value=""
+                                           id="newsUn_inserttime" onclick="SelectDate(this,'yyyy-MM-dd');"></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr height="30">
+                                <td>捐赠数量:</td>
+                                <td><input type="text" name="newsUn.bookCount" size="50" maxlength="8" value="1"
+                                           id="newsUn_bookCount" onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                           onafterpaste="this.value=this.value.replace(/\D/g,'')"></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <input type="hidden" name="newsUn.cataid" value="44">
+                            <tr height="30">
+                                <td>备&nbsp;&nbsp;&nbsp;注:</td>
+                                <td>
+                                    <textarea id="content1" name="newsUn.des" cols="100" rows="3"
+                                              style="height: 200px;">
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr height="30">
+                                <td>&nbsp;</td>
+                                <td><input type="submit" value="提交">&nbsp;<input type="reset" value="重置"></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="right rightside">
+            <a target="_self" href="library.html" class="notice"></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        版权所有 华南师范大学图书馆
+        <br>
+        Copyright © 2017 South China Normal University Library.
+    </div>
+</div>
+
+</body>
+</html>
